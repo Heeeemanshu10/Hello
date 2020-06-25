@@ -1,28 +1,71 @@
 <html>
    <head>
        <title>form</title>
+   <script>
+           function passvalues(){
+           var form = new FormData(document.getElementById("form"))
+           var first_name = form.get("text-name");
+           document.write("fname",first_name);
+
+           var last_name = form.get("text-name");
+           document.write("Last name:",last_name,"<br>");
+
+           var number = form.get("text-number");
+           document.write("Number:",number,"<br>");
+
+           var Degree_choice = form.get("action");
+           document.write("Degree Choice");
+           if(Degree_choice == "on")
+           {
+               document.write("Bachelors<br>");
+           }
+           else if(form.get("action")!="on")
+           {
+               document.write("Invalid choice<br>")
+           }
+           else
+           {
+               document.write("Masters<br>")
+           }
+           var Description = form.get("text_Description");
+           document.write("Description:",Description,"<br>");
+           
+           var Subject_Choice = form.get("text_subject");
+           document.write("Subject:");
+           if(Subject_Choice != null)
+            document.write("Maths<br>");
+           if(Subject_Choice!= null)
+            document.write("Physics<br>");
+           if(Subject_Choice!= null)
+            document.write("Chemistry<br>");    
+
+   </script>    
    </head>
-<form>
+<form action="details.html" id="form">
     <label for="fname">First Name:</label><br>
-    <input type="text" placeholder="Enter your first name"><br>
+    <input type="text" name="text_name" id="fname" placeholder="Enter your first name"><br>
     <label for="Lname">Last Name:</label><br>
-    <input type="text" placeholder="Enter your last name"><br>
+    <input type="text" id="lname" name="text_name" placeholder="Enter your last name"><br>
     <label for="Number">Phone Number:</label><br>
-    <input type="text" placeholder="Enter your phone Number"><br>
+    <input type="text" id="number" name="text_number" placeholder="Enter your phone Number"><br>
     <label for="Degree choice">Degree:</label><br>
-    <label for="Bachelors">Bachelors</label>
-    <button type="radio"></button><br>
-    <label for="Masters">Masters</label>
-    <button type="radio"></button><br>
-    <label for="Description">Description</label><br>
-    <input type="text" placeholder="Enter the description"><br>
+    <fieldset>
+        <legend>Please select one of the following</legend><br>
+        <input type="radio" name="action" id="Bachelors" value="Bachelors" /><label for="track">Bachelors</label><br />
+        <input type="radio" name="action" id="Masters" value="Masters"  /><label for="event">Masters</label><br />
+        
+    </fieldset>
+    <label for="Description">Description:</label><br>
+    <input type="text" id="Description" name="text_Description"><br>
     <label for="Subject choice">Subject choice</label><br>
     <label for="Maths">Maths</label>
-    <input type="checkbox" name="Maths"><br>
+    <input type="checkbox" id="Maths" name="text_subject" value="Maths"><br>
     <label for="Physics">Physics</label>
-    <input type="checkbox" name="Physics"><br>
+    <input type="checkbox" id="Physics" name="text_subject" value="Physics"><br>
     <label for="Chemistry">Chemistry</label>
-    <input type="checkbox" name="Chemistry"><br>
+    <input type="checkbox" id="Chemistry" name="text_subject" value="Chemistry"><br>
+    <button type="submit" onclick="passvalues()">Submit</button>
+    
 
 
 </form>

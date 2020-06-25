@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>result</title>
+<h1 style="text-align: center;">Results</h1>
+</head>
+<body>
+    Firstname = <span id="Firstname"></span><br>
+    Lastname = <span id="Lastname"></span><br>
+    number = <span id="number"></span><br>
+    Degree = <span id="Bachelors"></span><br>
+    Degree = <span id="Masters"></span><br>
+    Description = <span id="Description"></span><br>
+    Subject Choice = <span id="Maths"></span><br>
+    Subject Choice = <span id="Physics"></span><br>
+    Subject Choice = <span id="Chemistry"></span><br>
+  <script>
+      document.getElementById("Firstname").innerHTML = localStorage.getItem("fname");
+      document.getElementById("Lastname").innerHTML = localStorage.getItem("text2");
+      document.getElementById("number").innerHTML = localStorage.getItem("text3");
+      document.getElementById("Bachelors").innerHTML = localStorage.getItem("text4");
+      document.getElementById("Masters").innerHTML = localStorage.getItem("text5");
+      document.getElementById("Description").innerHTML = localStorage.getItem("text6");
+      document.getElementById("Maths").innerHTML = localStorage.getItem("text7");
+      document.getElementById("Physics").innerHTML = localStorage.getItem("text8");
+      document.getElementById("Chemistry").innerHTML = localStorage.getItem("text9");
+
+       
+  </script>
+  </body>
+  </html>  

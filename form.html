@@ -1,45 +1,31 @@
 <html>
    <head>
-       <title>form</title>
+       <title style="color:aquamarine; size:15px">form</title>
+       <link rel="stylesheet" type="text/css" href="style.css">
    <script>
            function passvalues(){
            var form = new FormData(document.getElementById("form"))
            var first_name = form.get("text-name");
-           document.write("fname",first_name);
+           localStorage.setItem("fname",first_name);
 
            var last_name = form.get("text-name");
-           document.write("Last name:",last_name,"<br>");
+           localStorage.setItem("Last name:",last_name);
 
            var number = form.get("text-number");
-           document.write("Number:",number,"<br>");
+           localStorage.setItem("Number:",number);
 
            var Degree_choice = form.get("action");
-           document.write("Degree Choice");
-           if(Degree_choice == "on")
-           {
-               document.write("Bachelors<br>");
-           }
-           else if(form.get("action")!="on")
-           {
-               document.write("Invalid choice<br>")
-           }
-           else
-           {
-               document.write("Masters<br>")
-           }
+           localStorage.setItem("Degree Choice",Degree_choice);
+           
            var Description = form.get("text_Description");
-           document.write("Description:",Description,"<br>");
+           localStorage.setItem("Description:",Description);
+           
            
            var Subject_Choice = form.get("text_subject");
-           document.write("Subject:");
-           if(Subject_Choice != null)
-            document.write("Maths<br>");
-           if(Subject_Choice!= null)
-            document.write("Physics<br>");
-           if(Subject_Choice!= null)
-            document.write("Chemistry<br>");    
+           localStorage.setItem("Subject:",Subject_Choice);
+               
 
-   </script>    
+   </script>
    </head>
 <form action="details.html" id="form">
     <label for="fname">First Name:</label><br>

@@ -1,0 +1,51 @@
+body{
+    background: rgb(250, 248, 246);
+    font-family: serif;
+    font-style: italic;
+}
+h1{
+    padding: 10 20 10 20;
+}
+iframe{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+a:link{
+color: aliceblue;
+}
+a:visited{
+    color: antiquewhite;
+}
+a:hover{
+    color: aquamarine;
+}
+a:active{
+    color: bisque;
+}
+li{
+    list-style-position: inside;
+    color: rgb(199, 117, 151);
+}
+table{
+    position: absolute;
+    top: 250px;
+    right: 750px;
+    width: 200px;
+    height: 100px;
+    outline-style: auto;
+    outline-color: crimson;
+    outline-offset: 2px;
+}
+.tr{
+    color: palevioletred;
+    text-align: right;
+}
+.td{
+    color: darkkhaki;
+    text-align: left;
+}
+a:hover{
+    color: darkorange;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}

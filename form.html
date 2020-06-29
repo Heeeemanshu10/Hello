@@ -4,7 +4,7 @@
        <link rel="stylesheet" type="text/css" href="style.css">
    <script>
            function passvalues(){
-           var form = new FormData(document.getElementById("form"))
+            var form = new FormData(document.getElementById("form"))
            var first_name = form.get("text-name");
            localStorage.setItem("fname",first_name);
 
@@ -12,7 +12,10 @@
            localStorage.setItem("Last name:",last_name);
 
            var number = form.get("text-number");
-           localStorage.setItem("Number:",number);
+           localStorage.setItem("Subject:",number);
+           var patt = /[0-9]/g;
+           patt.test(number);
+
 
            var Degree_choice = form.get("action");
            localStorage.setItem("Degree Choice",Degree_choice);
@@ -23,11 +26,13 @@
            
            var Subject_Choice = form.get("text_subject");
            localStorage.setItem("Subject:",Subject_Choice);
-               
-
+           var patt1 = /null/i;
+           patt1.test(Subject_Choice);
+           
+        }
    </script>
    </head>
-<form action="details.html" id="form">
+<form action="details.html" id="form" name="Myform" onsubmit="return passvalues()">
     <label for="fname">First Name:</label><br>
     <input type="text" name="text_name" id="fname" placeholder="Enter your first name"><br>
     <label for="Lname">Last Name:</label><br>
@@ -50,7 +55,7 @@
     <input type="checkbox" id="Physics" name="text_subject" value="Physics"><br>
     <label for="Chemistry">Chemistry</label>
     <input type="checkbox" id="Chemistry" name="text_subject" value="Chemistry"><br>
-    <button type="submit" onclick="passvalues()">Submit</button>
+    <button type="submit" >Submit</button>
     
 
 

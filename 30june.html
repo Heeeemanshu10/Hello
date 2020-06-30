@@ -1,0 +1,78 @@
+<!Doctype html>
+<html lang="en">
+    <head><title>Advanced Javascript</title>
+     <script>
+         console.log(Date());
+         function chain(){
+           if(document.getElementById("chain").value>10 && document.getElementById("chain").value<100)
+           {
+               document.getElementById("changes").innerHTML = "Number is okay";
+           }
+           else
+           return false;
+         }
+         function fibonacci(){
+           var t1 = 1;
+           var nextTerm;
+           var t2=0;
+           for(var i=1; i<=100 ; i++)
+           {
+               document.getElementById("changes").innerHTML = t1;
+               nextTerm = t1 + t2;
+               t1 = t2;
+               t2 = nextTerm;
+               
+           }
+           
+         }
+         function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try {
+    if(x == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5) throw "too low";
+    if(x > 10) throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+      
+     function string_task(){
+      var S = document.getElementById("string").innerHTML;
+      var Q = S.split(" ");
+      var one = Q[6];
+      document.getElementById("answer").innerHTML = one;
+      var two = Q[8];
+      document.getElementById("answer1").innerHTML = two;
+      var three = Q[11];
+      document.getElementById("answer2").innerHTML = three;
+          
+    }
+     </script>
+     </head>
+ <body>
+     <p>Press Ctrl+shift+I for opening up the console and check the date</p>
+     <button type="button" onclick="document.getElementById('changes').innerHTML=Date()">onclick event</button>
+     <button type="button" onmouseover="document.getElementById('changes').innerHTML = 'mouse over'">mouseover event</button>
+     <button type="button" onmouseout="document.getElementById('changes').innerHTML = 'mouse out'">mouseout event</button>
+     <label for="number">Enter Number</label><input type="text" id="chain"><button type="submit" onclick="chain()">submit</button><br>
+     <label for="loop">Print fibonacci series:</label><button type="button" id="loop" onclick="fibonacci()">fibonacci</button>
+     
+     <p id="changes"></p>
+     <p>Please input a number between 5 and 10:</p><br>
+     <input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+<h4>String task</h4>
+     <p id="string">HTML is a language used to develop and interact with web pages</p>
+     <button type="button" onclick="string_task()">button</button>
+     <p id="answer"></p>
+     <p id="answer1"></p>
+     <p id="answer2"></p>
+ </body>
+ </html>       

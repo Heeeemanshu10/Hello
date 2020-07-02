@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   <script>
+    $(document).ready(function(){
+        $("#0").dblclick(function(){
+            $(this).hide();
+        });
+    
+    }); 
+    $(document).ready(function(){
+        $("#button1").click(function(){
+            $("#1").toggle();
+        });
+    });  
+     
+    $(document).ready(function(){
+        $("#button2").click(function(){
+            $("#2").fadeOut(2000);
+        });
+    }); 
+    
+    $(document).ready(function(){
+        $("#button3").click(function(){
+            $("#3").fadeIn(2000);
+        });
+    });
+    $(document).ready(function(){
+        $("#button4").click(function(){
+            $.get("loadfile.php",function(data,status){
+                alert("Data:" + data + "\nStatus" + status);
+            });
+        });
+     });
+     $(document).ready(function(){
+        $("#button4").click(function(){
+            $.get("loadfile.php",function(data,status){
+                alert("Data:" + data + "\nStatus" + status);
+            });
+        });
+     });
+    </script>
+     
+    </head>
+<body>
+    <h1>Operations on jQuery</h1>
+    <p style="text-align: right;">2nd July</p>
+    <h5>Performing some tasks to toggle,hide,fade,double click texts</h5>
+     <div id="0"><b>Double Click on me to hide</b></div>
+     <div id="1"><b>Toggle</b></div><button id="button1">click on me to toggle</button> 
+     <div id="2"><b>This text is gonna fadeout</b></div><button id="button2">click on me to fadeout</button>
+     <div id="3"><b>This text is gonna fadeIn</b></div><button id="button3">click on me to fadeIn</button>
+     <div id="4"><b>AJAX and jQuery are gonna get replaced</b></div><button id="button4">click to load</button>
+    </body>
+</html>     
+
